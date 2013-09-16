@@ -9,7 +9,8 @@ from django.test.client import Client
 from django.utils import simplejson
 from django.utils.translation import get_language
 
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 from pyquery import PyQuery as pq
 

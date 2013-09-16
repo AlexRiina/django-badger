@@ -3,7 +3,8 @@ import logging
 from django.conf import settings
 from django.core.management import call_command
 from django.template.defaultfilters import slugify
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 from nose.tools import assert_equal, with_setup, assert_false, eq_, ok_
 from nose.plugins.attrib import attr
