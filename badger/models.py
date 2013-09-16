@@ -20,7 +20,9 @@ from django.core.mail import send_mail
 from django.core.exceptions import ValidationError
 from django.core.files.storage import FileSystemStorage
 from django.core.files.base import ContentFile
-from django.contrib.auth.models import User, AnonymousUser
+from django.contrib.auth.models import AnonymousUser
+User = settings.AUTH_USER_MODEL
+
 from django.contrib.sites.models import Site
 from django.contrib.contenttypes.models import ContentType
 
